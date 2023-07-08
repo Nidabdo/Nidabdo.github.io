@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    font-family: 'Poppins';
+}
+
+
+/* Tout ce qui conserne la nav bar */
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.main-nav {
+  align-items: center;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  padding-left: 13%;
+  padding-right: 13%;
+  position: fixed;
+  width:100%;
+  overflow: hidden;
+  top: 0px;
+  height: 6vh;
+  z-index: 2;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+li a:hover {
+  color: rgb(30,144,255);
+}
+
+.active {
+  color: rgb(30,144,255); 
+  font-weight: 600;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Ce qui conserne les sections */
+
+section {
+    min-height: 100vh;
+  }
+  
+  article {
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    margin: 0px auto;
+  }
+  
+  h2 {
+    padding: 40px 0px 0px 0px;
+    font-size: 3em;
+  }
+  
+  p {
+    font-size: 1.5em;
+  }
+
+  /* Partie Home */
+
+  section#home {
+    background-image: url(../images/bg-portfolio.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+  }
+
+  section#home article {
+    padding-top: 25%;
+  }
+
+  .hp-center-text{
+    display: grid;
+    place-items: center;
+  }
+
+  .typing-effect{
+    width: 37ch;
+    animation: typing 2s steps(37), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+  /* Partie About */
+
+  section#about {
+    padding-top: 4%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .profil {
+    width: auto;
+    height: 50%;
+    display: flex;
+  }
+  .cadre{
+    display: flex;
+    padding-top: 50px;
+    padding-left: 50px;
+    width: 40%;
+  }
+
+
+  .cadre img{
+    border: 1px solid black;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    transition: transform .3s;
+  }
+  
+  .cadre img:hover{
+    filter: none;
+    -webkit-filter: grayscale(0);
+    transform: scale(1.2);
+  }
+  .desc{
+    width: 70%;
+    margin-top: 50px;
+  }
+  
+  .profil-bas{
+    display: flex;
+    height: 50%;
+    width: 100%;
+  }
+
+  .skill{
+    text-align: center;
+    width: 55%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .langage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(30, 143, 255, 0.200);
+    border-radius: 20px;
+    height: 50%;
+    width: 100%;
+  }
+  .langage img{
+    width: 80px;
+    height: 80px;
+  }
+  .info {
+    width: 45%;
+    height: 50%;
+    padding-top: 80px;
+    padding-left: 50px;
+  }
+
+  section#about article{
+    margin-top: 2%;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Partie Expérience */
+
+  section#experience {
+    background-color: rgb(30, 143, 255);
+    background-blend-mode: multiply;
+    background-image: url(../images/fond-brique.avif);
+    background-attachment: fixed;
+  }
+
+  section#experience h2{
+    text-align: center;
+    color:white;
+  }
+
+  section#experience img{
+    margin-top: 1%;
+    margin-bottom: 2%;
+  }
+
+  section#experience article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .xp-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 800px;
+  }
+  .xp-box{
+    height: 30%;
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+  }
+  /* Partie Parcours */
+
+  section#parcours h2{
+    text-align: center;
+  }
+
+  section#parcours article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .parcours-container{
+    margin-top: 3%;
+    width: 1500px;
+    height: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .parcours-container h2{
+    font-size: 30px;
+    margin-bottom: 10%;
+  }
+  .parcours-card1{
+    padding: 20px;
+    width: 450px;
+    height: 650px;
+    background-color: rgba(30, 143, 255, 0.200);
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+  }
+  .parcours-card2{
+    padding: 20px;
+    width: 450px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(30, 143, 255, 0.200);
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+  }
+  .parcours-card3{
+    padding: 20px;
+    width: 450px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(30, 143, 255, 0.200);
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .parcours-card1 img{
+    width: 100%;
+  }
+
+  .parcours-card2 img{
+    width: 50%;
+    margin-top: 3%;
+  }
+
+  .parcours-card3 img{
+    height: 20%;
+    margin-top: 3%;
+    margin-bottom: 6%;
+  }
+
+
+
+  /* Partie Contact */
+
+  section#contact {
+    background-color: rgb(30, 143, 255);
+    background-blend-mode: multiply;
+    background-image: url(../images/fond-brique.avif);
+    background-attachment: fixed;
+  }
+  
+
+  .container2 {
+    max-width: 1200px;
+    margin-top: 18%;
+  }
+  .form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  .form-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333333;
+  }
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-container label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333333;
+  }
+  .form-container input,
+  .form-container textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+  }
+  .form-container input:focus,
+  .form-container textarea:focus {
+    outline: none;
+    border-bottom: 2px solid #26a69a;
+  }
+  .form-container button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: rgb(30, 143, 255);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .form-container button:hover {
+    background-color: rgba(30, 143, 255, 0.6);
+  }
+  
+  .form-reseaux{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .form-container img{
+    width: 50px;
+    height: 50px;
+    margin-left: 40px;
+  }
+  section#contact h3{
+    font-size: 2em;
+  }
+  
+  section#contact textarea{
+    font-family: 'Poppins';
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-wrap: wrap;
+    }
+    .form-container {
+      flex-basis: 100%;
+    }
+  }
+  
+  
